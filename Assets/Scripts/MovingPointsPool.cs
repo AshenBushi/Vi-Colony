@@ -6,9 +6,9 @@ public class MovingPointsPool : MonoBehaviour
     [SerializeField] private List<GameObject> movingPoints = new List<GameObject>();
     private int _index = -1;
 
-    public GameObject CurrentMovingPoint => movingPoints[_index];
+    public int Index => _index;
 
-    private void ScrollIndex(ref int index)
+    public void NextIndex(ref int index)
     {
         if (index < movingPoints.Count - 1)
             index++;
@@ -16,29 +16,29 @@ public class MovingPointsPool : MonoBehaviour
             index = 0;
     }
 
+    public Transform GetMovingPoint(int index)
+    {
+        return movingPoints[index].transform;
+    }
+    
     public GameObject GetNextMovingPoint()
     {
-        ScrollIndex(ref _index);
+        if(_index >= 0)
+            movingPoints[_index].SetActive(false);
+        NextIndex(ref _index);
         return movingPoints[_index];
     }
 
-    public void DisableCurrentPoint()
-    {
-        movingPoints[_index].SetActive(false);
-        SpawnNewMovingPoint();
-    }
-
-    private void SpawnNewMovingPoint()
+    public void SpawnNewMovingPoint()
     {
         var pointIndex = _index;
         
-        ScrollIndex(ref pointIndex);
+        NextIndex(ref pointIndex);
         
-        var pointPosition = movingPoints[pointIndex].transform.position; 
-        Vector2 coordinate = new Vector2(pointPosition.x + 2 * Random.Range(-2f, 2f), pointPosition.y + Random.Range(7f, 8f));
-        
-        ScrollIndex(ref pointIndex);
-        movingPoints[pointIndex].transform.position = coordinate;
+        var pointPosition = movingPoints[pointIndex].transform.position;
+
+        NextIndex(ref pointIndex);
+        movingPoints[pointIndex].transform.position = new Vector2(2 + 2 * Random.Range(-2.5f, 2.5f), pointPosition.y + Random.Range(5f, 8f));
         movingPoints[pointIndex].SetActive(true);
     }
 }

@@ -1,27 +1,40 @@
-﻿using System.Collections.Generic;
-using DG.Tweening;
+﻿using DG.Tweening;
 using UnityEngine;
 
 [RequireComponent(typeof(Player))]
 public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private MovingPointsPool movingPointsPool;
+    [SerializeField] private SceneCallibler sceneCallibler;
+    private PlayerInput _input;
     private Player _player;
     private Tween _moveTween;
     private GameObject _currentMovingPoint;
+
+    private void Awake()
+    {
+        _input = new PlayerInput();
+        _input.Enable();
+        _input.Player.Tap.performed += ctx => OnTap();
+    }
     private void Start()
     {
         _player = GetComponent<Player>();
     }
-    private void Update()
+    private void OnTap()
     {
-        if (!Input.GetMouseButtonDown(0) || _moveTween != null) return;
-        _moveTween.SetEase(Ease.Linear);
+        if (_moveTween != null) return;
         _moveTween = transform.DOMove(movingPointsPool.GetNextMovingPoint().transform.position,50 / _player.Speed);
-        _moveTween.onComplete += () =>
-        {
-            movingPointsPool.DisableCurrentPoint();
-            _moveTween = null;
-        };
+        _moveTween.OnComplete(NextJump);
+    }
+    private void NextJump()
+    {
+        movingPointsPool.SpawnNewMovingPoint();
+        sceneCallibler.CalibrateScene();
+    }
+
+    public void EnableTapping()
+    {
+        _moveTween = null;
     }
 }
