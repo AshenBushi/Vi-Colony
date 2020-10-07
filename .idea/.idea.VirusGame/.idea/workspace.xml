@@ -8,16 +8,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovingPoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovingPointsPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/MovingPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MovingPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MovingPointsPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraMover.cs" />
       </list>
     </option>
   </component>
@@ -67,6 +72,8 @@
       <option name="presentableId" value="Default" />
       <updated>1601884810055</updated>
       <workItem from="1601884814853" duration="2133000" />
+      <workItem from="1601903796007" duration="671000" />
+      <workItem from="1601962350462" duration="11662000" />
     </task>
     <servers />
   </component>
@@ -76,9 +83,9 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="WindowStateProjectService">
-    <state x="461" y="163" key="SettingsEditor" timestamp="1601884839395">
+    <state x="519" y="235" key="SettingsEditor" timestamp="1601963121246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601884839395" />
+    <state x="519" y="235" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601963121246" />
   </component>
 </project>

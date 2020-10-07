@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-
-namespace Player
+﻿using UnityEngine;
+public class Player : MonoBehaviour
 {
-    public class Player : MonoBehaviour
+    public int Health { get; } = 100;
+    public float Speed { get; } = 300;
+
+    private void Die()
     {
-        [SerializeField] private List<MovingPoint> _movingPoints = new List<MovingPoint>();
+        Destroy(gameObject);
     }
 }
