@@ -4,12 +4,12 @@ using UnityEngine;
 public class SceneCallibler : MonoBehaviour
 {
     [SerializeField] private PlayerMover player;
-    [SerializeField] private MovingPointsPool movingPointsPool;
+    [SerializeField] private MovePointsSpawner _movePointsSpawner;
 
     private Tween _moveTween;
-    private readonly Transform[] _movingPoints = new Transform[4];
+    private readonly Transform[] _movingPoints = new Transform[3];
     private Vector2 _playerCalibratedPosition;
-    private readonly Vector2[] _pointsCalibratedPosition = new Vector2[4];
+    private readonly Vector2[] _pointsCalibratedPosition = new Vector2[3];
     private int _pointIndex;
     private float _duration = 0.5f;
 
@@ -17,7 +17,7 @@ public class SceneCallibler : MonoBehaviour
     {
         for (var i = 0; i < _movingPoints.Length; i++)
         {
-            _movingPoints[i] = movingPointsPool.GetMovingPoint(i);
+            _movingPoints[i] = _movePointsSpawner.GetMovingPoint(i);
         }
     }
 
@@ -37,11 +37,11 @@ public class SceneCallibler : MonoBehaviour
 
     private void SetCalibratedPositions()
     {
-        _pointIndex = movingPointsPool.Index;
+        _pointIndex = _movePointsSpawner.Index;
         var playerPosition = player.transform.position;
         var yCelebrateStep = _movingPoints[_pointIndex].position.y;
         var saveIndex = _pointIndex;
-        movingPointsPool.NextIndex(ref _pointIndex);
+        _movePointsSpawner.NextIndex(ref _pointIndex);
 
         var celebrateValue = Mathf.Abs(playerPosition.x - _movingPoints[_pointIndex].position.x) / 2;
         var celebrateNumber = playerPosition.x > _movingPoints[_pointIndex].position.x ? 1 : -1;

@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class Player : MonoBehaviour
 {
-    public int Health { get; } = 100;
+    //public int Health { get; } = 100;
     public float Speed { get; } = 100;
 
-    private void Die()
+    public void Die()
     {
-        Destroy(gameObject);
+        SceneManager.LoadScene(0);
     }
 }

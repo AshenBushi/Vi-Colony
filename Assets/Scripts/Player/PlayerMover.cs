@@ -1,11 +1,12 @@
 ﻿using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Player))]
 public class PlayerMover : MonoBehaviour
 {
-    [SerializeField] private MovingPointsPool movingPointsPool;
-    [SerializeField] private SceneCallibler sceneCallibler;
+    [SerializeField] private MovePointsSpawner _movePointsSpawner;
+    [SerializeField] private SceneCallibler _sceneCallibler;
     private PlayerInput _input;
     private Player _player;
     private Tween _moveTween;
@@ -24,13 +25,13 @@ public class PlayerMover : MonoBehaviour
     private void OnTap()
     {
         if (_moveTween != null) return;
-        _moveTween = transform.DOMove(movingPointsPool.GetNextMovingPoint().transform.position,50 / _player.Speed);
+        _moveTween = transform.DOMove(_movePointsSpawner.GetNextMovingPoint().transform.position,50 / _player.Speed);
         _moveTween.OnComplete(NextJump);
     }
     private void NextJump()
     {
-        movingPointsPool.SpawnNewMovingPoint();
-        sceneCallibler.CalibrateScene();
+        _movePointsSpawner.SpawnNewMovingPoint();
+        _sceneCallibler.CalibrateScene();
     }
 
     public void EnableTapping()
