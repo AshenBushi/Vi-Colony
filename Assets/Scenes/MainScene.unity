@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e6b4d9486e7854bbd24bc50982f7ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1606318237}
+  _player: {fileID: 1606318237}
   _movePointsSpawner: {fileID: 1721666165}
 --- !u!20 &519420031
 Camera:
@@ -581,3 +581,4 @@ MonoBehaviour:
   _capacity: 3
   _template: {fileID: 1468330605397198909, guid: 62ccafafc8d0f1a48899f802704a1c0c,
     type: 3}
+  _playerMover: {fileID: 1606318237}

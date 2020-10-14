@@ -1,13 +1,14 @@
-﻿using DG.Tweening;
+﻿using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class SceneCallibler : MonoBehaviour
 {
-    [SerializeField] private PlayerMover player;
+    [SerializeField] private PlayerMover _player;
     [SerializeField] private MovePointsSpawner _movePointsSpawner;
 
     private Tween _moveTween;
-    private readonly Transform[] _movingPoints = new Transform[3];
+    private List<MovePoint> _movePoints = new List<MovePoint>();
     private Vector2 _playerCalibratedPosition;
     private readonly Vector2[] _pointsCalibratedPosition = new Vector2[3];
     private int _pointIndex;
@@ -15,47 +16,44 @@ public class SceneCallibler : MonoBehaviour
 
     private void Start()
     {
-        for (var i = 0; i < _movingPoints.Length; i++)
-        {
-            _movingPoints[i] = _movePointsSpawner.GetMovingPoint(i);
-        }
+        _movePoints = _movePointsSpawner.MovePoints;
     }
 
     public void CalibrateScene()
     {
         SetCalibratedPositions();
         
-        _moveTween = player.transform.DOMove(_playerCalibratedPosition, _duration);
+        _moveTween = _player.transform.DOMove(_playerCalibratedPosition, _duration);
 
-        for (var i = 0; i < _movingPoints.Length; i++)
+        for (var i = 0; i < _movePoints.Count; i++)
         {
-            _moveTween = _movingPoints[i].transform.DOMove(_pointsCalibratedPosition[i], _duration);
+            _moveTween = _movePoints[i].transform.DOMove(_pointsCalibratedPosition[i], _duration);
         }
 
-        _moveTween.OnComplete(player.EnableTapping);
+        _moveTween.OnComplete(_player.EnableTapping);
     }
 
     private void SetCalibratedPositions()
     {
         _pointIndex = _movePointsSpawner.Index;
-        var playerPosition = player.transform.position;
-        var yCelebrateStep = _movingPoints[_pointIndex].position.y;
+        var playerPosition = _player.transform.position;
+        var yCelebrateStep = _movePoints[_pointIndex].transform.position.y;
         var saveIndex = _pointIndex;
         _movePointsSpawner.NextIndex(ref _pointIndex);
 
-        var celebrateValue = Mathf.Abs(playerPosition.x - _movingPoints[_pointIndex].position.x) / 2;
-        var celebrateNumber = playerPosition.x > _movingPoints[_pointIndex].position.x ? 1 : -1;
+        var celebrateValue = Mathf.Abs(playerPosition.x - _movePoints[_pointIndex].transform.position.x) / 2;
+        var celebrateNumber = playerPosition.x > _movePoints[_pointIndex].transform.position.x ? 1 : -1;
 
         _playerCalibratedPosition = new Vector2(2 + celebrateValue * celebrateNumber, playerPosition.y - yCelebrateStep);
-        _pointsCalibratedPosition[_pointIndex] = new Vector2(2 - celebrateValue * celebrateNumber, _movingPoints[_pointIndex].position.y - yCelebrateStep);
+        _pointsCalibratedPosition[_pointIndex] = new Vector2(2 - celebrateValue * celebrateNumber, _movePoints[_pointIndex].transform.position.y - yCelebrateStep);
         
-        for (var i = 0; i < _movingPoints.Length; i++)
+        for (var i = 0; i < _movePoints.Count; i++)
         {
             if (i == _pointIndex) continue;
             if(i == saveIndex)
                 _pointsCalibratedPosition[i] = _playerCalibratedPosition;
             else
-                _pointsCalibratedPosition[i] = new Vector2(_movingPoints[i].position.x, _movingPoints[i].position.y - yCelebrateStep);
+                _pointsCalibratedPosition[i] = new Vector2(_movePoints[i].transform.position.x, _movePoints[i].transform.position.y - yCelebrateStep);
         }
     }
 }

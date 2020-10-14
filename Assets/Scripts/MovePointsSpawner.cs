@@ -1,60 +1,81 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class MovePointsSpawner : ObjectPool
 {
     [SerializeField] private GameObject _template;
-    private int _index = -1;
+    [SerializeField] private PlayerMover _playerMover;
 
+    private int _index = -1;
+    private int _pointNumber = 0;
+    
+    public List<MovePoint> MovePoints { get; } = new List<MovePoint>();
     public int Index => _index;
 
     private void Awake()
     {
         Initialize(_template);
 
-        float previousPointY = 0;
-        
         foreach (var point in Pool)
         {
-            point.transform.position = new Vector2(2 + 2 * Random.Range(-2.5f, 2.5f),previousPointY + Random.Range(5f, 8f));
+            MovePoints.Add(point.GetComponent<MovePoint>());
+        }
+        
+        float previousPointY = 0;
+
+        foreach (var point in MovePoints)
+        {
+            SetPointPosition(point, previousPointY);
             previousPointY = point.transform.position.y;
         }
     }
 
+    private void OnEnable()
+    {
+        _playerMover.MakeJump += SpawnNewMovingPoint;
+    }
+
+    private void OnDisable()
+    {
+        _playerMover.MakeJump -= SpawnNewMovingPoint;
+    }
+
     public void NextIndex(ref int index)
     {
-        if (index < Pool.Count - 1)
+        if (index < MovePoints.Count - 1)
             index++;
         else
             index = 0;
     }
 
-    public Transform GetMovingPoint(int index)
-    {
-        return Pool[index].transform;
-    }
-    
-    public GameObject GetNextMovingPoint()
+    public MovePoint GetNextMovingPoint()
     {
         if(_index >= 0)
-            Pool[_index].SetActive(false);
+            MovePoints[_index].gameObject.SetActive(false);
         NextIndex(ref _index);
-        return Pool[_index];
+        return MovePoints[_index];
     }
 
-    public void SpawnNewMovingPoint()
+    private void SpawnNewMovingPoint()
     {
         var pointIndex = _index;
-        
+        MovePoints[pointIndex].GetComponentsInChildren<ObstacleSpawner>()[0].DisableAllObstacles();
+        MovePoints[pointIndex].GetComponentsInChildren<ObstacleSpawner>()[1].DisableAllObstacles();
         NextIndex(ref pointIndex);
         
-        var pointPosition = Pool[pointIndex].transform.position;
+        var pointPosition = MovePoints[pointIndex].transform.position;
 
         NextIndex(ref pointIndex);
-        Pool[pointIndex].transform.position = new Vector2(2 + 2 * Random.Range(-2.5f, 2.5f), pointPosition.y + Random.Range(5f, 8f));
-        Pool[pointIndex].gameObject.SetActive(true);
+        SetPointPosition(MovePoints[pointIndex], pointPosition.y);
+        MovePoints[pointIndex].gameObject.SetActive(true);
+    }
+
+    private void SetPointPosition(MovePoint point, float previousPointY)
+    {
+        point.transform.position = new Vector2(2 + 2 * Random.Range(-2.5f, 2.5f),previousPointY + Random.Range(5f, 8f));
+        point.GetComponentsInChildren<ObstacleSpawner>()[0].GenerateObstaclesCombination(_pointNumber);
+        point.GetComponentsInChildren<ObstacleSpawner>()[1].GenerateObstaclesCombination(_pointNumber);
     }
 }

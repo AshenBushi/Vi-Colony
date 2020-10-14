@@ -143,13 +143,14 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="MovePointsSpawner.cs" t="Include" />
-          <e p="MovingPoint" t="Include">
-            <e p="MovingPoint.cs" t="Include" />
+          <e p="MovePoint" t="Include">
+            <e p="MovePoint.cs" t="Include" />
             <e p="Obstacle" t="Include">
               <e p="Obstacle.cs" t="Include" />
             </e>
+            <e p="ObstacleSpawner.cs" t="Include" />
           </e>
+          <e p="MovePointsSpawner.cs" t="Include" />
           <e p="ObjectPool.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="Player.cs" t="Include" />

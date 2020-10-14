@@ -1,16 +1,18 @@
 ﻿using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-[RequireComponent(typeof(Player))]
 public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private MovePointsSpawner _movePointsSpawner;
     [SerializeField] private SceneCallibler _sceneCallibler;
+
     private PlayerInput _input;
     private Player _player;
     private Tween _moveTween;
-    private GameObject _currentMovingPoint;
+
+    public event UnityAction MakeJump;
 
     private void Awake()
     {
@@ -30,7 +32,7 @@ public class PlayerMover : MonoBehaviour
     }
     private void NextJump()
     {
-        _movePointsSpawner.SpawnNewMovingPoint();
+        MakeJump?.Invoke();
         _sceneCallibler.CalibrateScene();
     }
 
