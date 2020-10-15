@@ -61,8 +61,12 @@ public class MovePointsSpawner : ObjectPool
     private void SpawnNewMovingPoint()
     {
         var pointIndex = _index;
-        MovePoints[pointIndex].GetComponentsInChildren<ObstacleSpawner>()[0].DisableAllObstacles();
-        MovePoints[pointIndex].GetComponentsInChildren<ObstacleSpawner>()[1].DisableAllObstacles();
+        
+        foreach (var item in MovePoints[pointIndex].GetComponentsInChildren<ObstacleSpawner>())
+        {
+            item.DisableAllObstacles();
+        }
+        
         NextIndex(ref pointIndex);
         
         var pointPosition = MovePoints[pointIndex].transform.position;
@@ -75,7 +79,10 @@ public class MovePointsSpawner : ObjectPool
     private void SetPointPosition(MovePoint point, float previousPointY)
     {
         point.transform.position = new Vector2(2 + 2 * Random.Range(-2.5f, 2.5f),previousPointY + Random.Range(5f, 8f));
-        point.GetComponentsInChildren<ObstacleSpawner>()[0].GenerateObstaclesCombination(_pointNumber);
-        point.GetComponentsInChildren<ObstacleSpawner>()[1].GenerateObstaclesCombination(_pointNumber);
+
+        foreach (var item in point.GetComponentsInChildren<ObstacleSpawner>())
+        {
+            item.GenerateObstaclesCombination(_pointNumber++);
+        }
     }
 }

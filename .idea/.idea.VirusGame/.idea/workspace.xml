@@ -16,10 +16,12 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneCallibler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/SwampAttack/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../C#/Тест/Тест/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/Бесконечный раннер/Scripts/ObjectPool.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePoint/Obstacle/Obstacle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/SwampAttack/Scripts/Spawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../C#/Практика/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePoint/ObstacleSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
@@ -40,12 +42,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPool.cs" />
         <option value="$PROJECT_DIR$/../IJuniorCourse2D/Assets/Бесконечный раннер/Scripts/ObjectPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneCallibler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/MovePoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/ObstacleSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MovePointsSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/Obstacle/Obstacle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MovePointsSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" />
       </list>
     </option>
   </component>

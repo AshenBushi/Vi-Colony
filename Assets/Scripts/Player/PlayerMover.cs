@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -20,20 +21,34 @@ public class PlayerMover : MonoBehaviour
         _input.Enable();
         _input.Player.Tap.performed += ctx => OnTap();
     }
-    private void Start()
+
+    private void OnEnable()
     {
         _player = GetComponent<Player>();
+        _player.Died += OnDied;
     }
+
+    private void OnDisable()
+    {
+        _player.Died -= OnDied;
+    }
+    
     private void OnTap()
     {
         if (_moveTween != null) return;
-        _moveTween = transform.DOMove(_movePointsSpawner.GetNextMovingPoint().transform.position,50 / _player.Speed);
+        var spawnerPosition = _movePointsSpawner.GetNextMovingPoint().transform.position;
+            _moveTween = transform.DOMove(spawnerPosition,(spawnerPosition.y - _player.transform.position.y) / (_player.Speed * 2)).SetEase(Ease.Linear);
         _moveTween.OnComplete(NextJump);
     }
     private void NextJump()
     {
         MakeJump?.Invoke();
         _sceneCallibler.CalibrateScene();
+    }
+
+    private void OnDied()
+    {
+        _moveTween.Kill();
     }
 
     public void EnableTapping()
