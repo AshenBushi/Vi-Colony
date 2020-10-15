@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -22,9 +23,12 @@ public class MovePointsSpawner : ObjectPool
         {
             MovePoints.Add(point.GetComponent<MovePoint>());
         }
-        
-        float previousPointY = 0;
+    }
 
+    private void Start()
+    {
+        float previousPointY = 0;
+        
         foreach (var point in MovePoints)
         {
             SetPointPosition(point, previousPointY);
@@ -78,11 +82,11 @@ public class MovePointsSpawner : ObjectPool
 
     private void SetPointPosition(MovePoint point, float previousPointY)
     {
-        point.transform.position = new Vector2(2 + 2 * Random.Range(-2.5f, 2.5f),previousPointY + Random.Range(5f, 8f));
+        point.transform.position = new Vector2(Random.Range(-3.5f, 3.5f),previousPointY + Random.Range(5f, 8f));
 
         foreach (var item in point.GetComponentsInChildren<ObstacleSpawner>())
         {
-            item.GenerateObstaclesCombination(_pointNumber++);
+            item.SpawnObstacles(_pointNumber++);
         }
     }
 }

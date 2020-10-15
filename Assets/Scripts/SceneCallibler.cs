@@ -44,8 +44,8 @@ public class SceneCallibler : MonoBehaviour
         var celebrateValue = Mathf.Abs(playerPosition.x - _movePoints[_pointIndex].transform.position.x) / 2;
         var celebrateNumber = playerPosition.x > _movePoints[_pointIndex].transform.position.x ? 1 : -1;
 
-        _playerCalibratedPosition = new Vector2(2 + celebrateValue * celebrateNumber, playerPosition.y - yCelebrateStep);
-        _pointsCalibratedPosition[_pointIndex] = new Vector2(2 - celebrateValue * celebrateNumber, _movePoints[_pointIndex].transform.position.y - yCelebrateStep);
+        _playerCalibratedPosition = new Vector2(0 + celebrateValue * celebrateNumber, playerPosition.y - yCelebrateStep);
+        _pointsCalibratedPosition[_pointIndex] = new Vector2(0 - celebrateValue * celebrateNumber, _movePoints[_pointIndex].transform.position.y - yCelebrateStep);
         
         for (var i = 0; i < _movePoints.Count; i++)
         {
