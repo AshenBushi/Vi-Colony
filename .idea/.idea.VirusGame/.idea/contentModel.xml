@@ -160,6 +160,9 @@
           </e>
           <e p="SceneCallibler.cs" t="Include" />
           <e p="UI" t="Include">
+            <e p="Background" t="Include">
+              <e p="ChaoticMover.cs" t="Include" />
+            </e>
             <e p="ShowJumps.cs" t="Include" />
           </e>
         </e>

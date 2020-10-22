@@ -29,6 +29,7 @@
     <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/SwampAttack/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/Бесконечный раннер/Scripts/Enemy/EnemyMover.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePoint/MovePoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Background/ChaoticMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/SwampAttack/Scripts/Shop.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/SwampAttack/Scripts/Spawner.cs" root0="SKIP_HIGHLIGHTING" />
@@ -56,6 +57,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ShowJumps.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/ObstacleSpawner.cs" />
+        <option value="$PROJECT_DIR$/../../C#/Тест/Тест/Program.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Background/ChaoticMover.cs" />
       </list>
     </option>
   </component>
@@ -117,6 +120,7 @@
       <workItem from="1602657595174" duration="9587000" />
       <workItem from="1602755048714" duration="7691000" />
       <workItem from="1603209876332" duration="17000" />
+      <workItem from="1603355155174" duration="4651000" />
     </task>
     <servers />
   </component>
