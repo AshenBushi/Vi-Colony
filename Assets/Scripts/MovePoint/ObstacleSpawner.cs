@@ -42,14 +42,19 @@ public class ObstacleSpawner: ObjectPool
         switch (level)
         {
             case 0:
-                _toTurnOn = Random.Range(Convert.ToInt32(2 + pointNumber / 10), Convert.ToInt32(4 + pointNumber / 10));
-                _speed = Random.Range(1, 3);
+                _toTurnOn = Random.Range(Convert.ToInt32(2 + pointNumber / 10), Convert.ToInt32(5 + pointNumber / 10));
+                _speed = Random.Range(1, 3) + pointNumber / 15;
+                break;
+            case 1:
+                _toTurnOn = Random.Range(_capacity / 2, _capacity - 2);
+                _speed = Random.Range(1, 3) + level;
                 break;
             default:
-                _toTurnOn = Random.Range(Convert.ToInt32(2 + pointNumber / 10), Convert.ToInt32(4 + pointNumber / 10));
-                _speed = Random.Range(1, 3);
+                _toTurnOn = Random.Range(2, 9);
+                _speed = Random.Range(1, 5);
                 break;
         }
+        
     }
     
     public void SpawnObstacles(int pointNumber)

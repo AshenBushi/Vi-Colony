@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public float PlayerJumps { get; private set; } = 0;
 
     public event UnityAction Died;
+    public event UnityAction Jumping;
 
     private void OnEnable()
     {
@@ -34,5 +35,6 @@ public class Player : MonoBehaviour
     private void OnMakeJump()
     {
         PlayerJumps++;
+        Jumping?.Invoke();
     }
 }
