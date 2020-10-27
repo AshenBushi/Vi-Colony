@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SceneCallibler : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class SceneCallibler : MonoBehaviour
     private int _pointIndex;
     private float _duration = 0.5f;
 
+    public event UnityAction Caliber;
+
     private void Start()
     {
         _movePoints = _movePointsSpawner.MovePoints;
@@ -23,11 +26,12 @@ public class SceneCallibler : MonoBehaviour
     {
         SetCalibratedPositions();
         
-        _moveTween = _player.transform.DOMove(_playerCalibratedPosition, _duration);
+        Caliber?.Invoke();
+        _moveTween = _player.transform.DOMove(_playerCalibratedPosition, _duration).SetLink(gameObject);
 
         for (var i = 0; i < _movePoints.Count; i++)
         {
-            _moveTween = _movePoints[i].transform.DOMove(_pointsCalibratedPosition[i], _duration);
+            _moveTween = _movePoints[i].transform.DOMove(_pointsCalibratedPosition[i], _duration).SetLink(gameObject);
         }
 
         _moveTween.OnComplete(_player.EnableTapping);

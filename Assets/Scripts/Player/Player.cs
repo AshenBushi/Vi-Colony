@@ -1,4 +1,5 @@
 ﻿using System;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -7,12 +8,12 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     private PlayerMover _mover;
+    private const int DefaultSpeed = 10;
     
     //public int Health { get; } = 100;
-    public float Speed { get; } = 10;
+    public float Speed { get; private set;} = DefaultSpeed;
     public float PlayerJumps { get; private set; } = 0;
-
-    public event UnityAction Died;
+    
     public event UnityAction Jumping;
 
     private void OnEnable()
@@ -29,12 +30,12 @@ public class Player : MonoBehaviour
     public void Die()
     {
         SceneManager.LoadScene(0);
-        Died?.Invoke();
     }
 
     private void OnMakeJump()
     {
         PlayerJumps++;
+        Speed = DefaultSpeed + PlayerJumps / 100;
         Jumping?.Invoke();
     }
 }

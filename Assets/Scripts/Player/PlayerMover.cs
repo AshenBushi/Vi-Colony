@@ -25,30 +25,18 @@ public class PlayerMover : MonoBehaviour
     private void OnEnable()
     {
         _player = GetComponent<Player>();
-        _player.Died += OnDied;
     }
-
-    private void OnDisable()
-    {
-        _player.Died -= OnDied;
-    }
-    
     private void OnTap()
     {
         if (_moveTween != null) return;
         var spawnerPosition = _movePointsSpawner.GetNextMovingPoint().transform.position;
-            _moveTween = transform.DOMove(spawnerPosition,(spawnerPosition.y - _player.transform.position.y) / (_player.Speed * 2)).SetEase(Ease.Linear);
+            _moveTween = transform.DOMove(spawnerPosition,(spawnerPosition.y - _player.transform.position.y) / (_player.Speed * 2)).SetEase(Ease.Linear).SetLink(gameObject);
         _moveTween.OnComplete(NextJump);
     }
     private void NextJump()
     {
         MakeJump?.Invoke();
         _sceneCallibler.CalibrateScene();
-    }
-
-    private void OnDied()
-    {
-        _moveTween.Kill();
     }
 
     public void EnableTapping()

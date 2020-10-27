@@ -15,6 +15,8 @@ public class MovePointsSpawner : ObjectPool
     public List<MovePoint> MovePoints { get; } = new List<MovePoint>();
     public int Index => _index;
 
+    public int PointNumber => _pointNumber;
+
     private void Awake()
     {
         Initialize(_template);
@@ -57,7 +59,7 @@ public class MovePointsSpawner : ObjectPool
     public MovePoint GetNextMovingPoint()
     {
         if(_index >= 0)
-            MovePoints[_index].gameObject.SetActive(false);
+            MovePoints[_index].ChangPointState(false);
         NextIndex(ref _index);
         return MovePoints[_index];
     }
@@ -77,12 +79,13 @@ public class MovePointsSpawner : ObjectPool
 
         NextIndex(ref pointIndex);
         SetPointPosition(MovePoints[pointIndex], pointPosition.y);
-        MovePoints[pointIndex].gameObject.SetActive(true);
+        MovePoints[pointIndex].ChangPointState(true);
+        MovePoints[pointIndex].SpawnPoint();
     }
 
     private void SetPointPosition(MovePoint point, float previousPointY)
     {
-        point.transform.position = new Vector2(Random.Range(-3.5f, 3.5f),previousPointY + Random.Range(5f, 8f));
+        point.transform.position = new Vector2(Random.Range(-3.5f, 3.5f),previousPointY + Random.Range(7f, 8f));
 
         foreach (var item in point.GetComponentsInChildren<ObstacleSpawner>())
         {

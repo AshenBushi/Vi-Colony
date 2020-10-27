@@ -13,6 +13,9 @@ public class ObstacleSpawner: ObjectPool
     private float _startAngle;
     private float _angleStep;
     private int _toTurnOn;
+    private int _level;
+    private int _pointNumber;
+    private bool _direction;
 
     private void Awake()
     {
@@ -35,26 +38,33 @@ public class ObstacleSpawner: ObjectPool
         }
     }
 
-    private void Generator(int pointNumber)
+    private void Generator(int number)
     {
-        var level = pointNumber / 50;
+        _level = number / 25;
+        _pointNumber = number - _level * 25;
+        
+        _toTurnOn = Random.Range(Convert.ToInt32(_capacity / 5 + _pointNumber / 5), Convert.ToInt32(_capacity / 2 + _pointNumber / 5));
+        _speed = 1 + number / 25;
 
-        switch (level)
+        var chance = Random.Range(0, 100);
+
+        _direction = chance < 50;
+
+        /*switch (_level)
         {
             case 0:
-                _toTurnOn = Random.Range(Convert.ToInt32(2 + pointNumber / 10), Convert.ToInt32(5 + pointNumber / 10));
-                _speed = Random.Range(1, 3) + pointNumber / 15;
+                _toTurnOn = Random.Range(Convert.ToInt32(_capacity / 5 + _pointNumber / 10), Convert.ToInt32(_capacity / 2 + _pointNumber / 10));
+                _speed = 1 + _pointNumber / 50;
                 break;
             case 1:
-                _toTurnOn = Random.Range(_capacity / 2, _capacity - 2);
-                _speed = Random.Range(1, 3) + level;
+                _toTurnOn = Random.Range(Convert.ToInt32(_capacity / 5 + _pointNumber / 10), Convert.ToInt32(_capacity / 2 + _pointNumber / 10));
+                _speed = 3 + _pointNumber / 50;
                 break;
             default:
-                _toTurnOn = Random.Range(2, 9);
-                _speed = Random.Range(1, 5);
+                _toTurnOn = Random.Range(Convert.ToInt32(_capacity / 5 + _pointNumber / 10), Convert.ToInt32(_capacity / 2 + _pointNumber / 10));
+                _speed = 5 + _pointNumber / 50;
                 break;
-        }
-        
+        }*/
     }
     
     public void SpawnObstacles(int pointNumber)
@@ -66,7 +76,7 @@ public class ObstacleSpawner: ObjectPool
         
         foreach (var obstacle in _obstacles)
         {
-            obstacle.SetParameters(_radius, _speed, _startAngle);
+            obstacle.SetParameters(_radius, _speed, _startAngle, _direction);
             _startAngle += _angleStep;
         }
         
