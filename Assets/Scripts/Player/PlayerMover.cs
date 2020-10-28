@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private MovePointsSpawner _movePointsSpawner;
-    [SerializeField] private SceneCallibler _sceneCallibler;
+    [SerializeField] private SceneCalibrator _sceneCalibrator;
 
     private PlayerInput _input;
     private Player _player;
@@ -30,13 +30,13 @@ public class PlayerMover : MonoBehaviour
     {
         if (_moveTween != null) return;
         var spawnerPosition = _movePointsSpawner.GetNextMovingPoint().transform.position;
-            _moveTween = transform.DOMove(spawnerPosition,(spawnerPosition.y - _player.transform.position.y) / (_player.Speed * 2)).SetEase(Ease.Linear).SetLink(gameObject);
+        _moveTween = transform.DOMove(spawnerPosition,(spawnerPosition.y - _player.transform.position.y) / (_player.Speed * 2)).SetEase(Ease.Linear).SetLink(gameObject);
         _moveTween.OnComplete(NextJump);
     }
     private void NextJump()
     {
         MakeJump?.Invoke();
-        _sceneCallibler.CalibrateScene();
+        _sceneCalibrator.CalibrateScene();
     }
 
     public void EnableTapping()

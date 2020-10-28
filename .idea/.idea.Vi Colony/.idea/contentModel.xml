@@ -144,8 +144,9 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Effects" t="Include">
-            <e p="ChaoticMover.cs" t="Include" />
+            <e p="Pulse.cs" t="Include" />
             <e p="Rotate.cs" t="Include" />
+            <e p="Tape.cs" t="Include" />
           </e>
           <e p="MovePoint" t="Include">
             <e p="MovePoint.cs" t="Include" />
@@ -162,8 +163,9 @@
             <e p="PlayerInput.cs" t="Include" />
             <e p="PlayerMover.cs" t="Include" />
           </e>
-          <e p="SceneCallibler.cs" t="Include" />
+          <e p="SceneCalibrator.cs" t="Include" />
           <e p="UI" t="Include">
+            <e p="Buttons.cs" t="Include" />
             <e p="ShowJumps.cs" t="Include" />
           </e>
         </e>

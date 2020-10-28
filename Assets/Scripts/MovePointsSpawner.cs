@@ -15,8 +15,6 @@ public class MovePointsSpawner : ObjectPool
     public List<MovePoint> MovePoints { get; } = new List<MovePoint>();
     public int Index => _index;
 
-    public int PointNumber => _pointNumber;
-
     private void Awake()
     {
         Initialize(_template);

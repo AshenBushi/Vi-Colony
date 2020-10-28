@@ -26,7 +26,6 @@ public class ObstacleSpawner: ObjectPool
         foreach (var item in Pool)
         {
             _obstacles.Add(item.GetComponent<ObstacleMover>());
-            item.SetActive(false);
         }
     }
 
@@ -34,7 +33,7 @@ public class ObstacleSpawner: ObjectPool
     {
         foreach (var obstacle in _obstacles)
         {
-            obstacle.gameObject.SetActive(false);
+            obstacle.Disable();
         }
     }
 
@@ -84,7 +83,7 @@ public class ObstacleSpawner: ObjectPool
         {
             var index = Random.Range(0, _obstacles.Count);
             if (_obstacles[index].gameObject.activeSelf != false) continue;
-            _obstacles[index].gameObject.SetActive(true);
+            _obstacles[index].Enable();
             _toTurnOn--;
         }
     }

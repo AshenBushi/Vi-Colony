@@ -3,7 +3,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class SceneCallibler : MonoBehaviour
+public class SceneCalibrator : MonoBehaviour
 {
     [SerializeField] private PlayerMover _player;
     [SerializeField] private MovePointsSpawner _movePointsSpawner;
@@ -13,9 +13,9 @@ public class SceneCallibler : MonoBehaviour
     private Vector2 _playerCalibratedPosition;
     private readonly Vector2[] _pointsCalibratedPosition = new Vector2[3];
     private int _pointIndex;
-    private float _duration = 0.5f;
+    public float Duration { get; } = 0.4f;
 
-    public event UnityAction Caliber;
+    public event UnityAction OnCaliber;
 
     private void Start()
     {
@@ -26,12 +26,12 @@ public class SceneCallibler : MonoBehaviour
     {
         SetCalibratedPositions();
         
-        Caliber?.Invoke();
-        _moveTween = _player.transform.DOMove(_playerCalibratedPosition, _duration).SetLink(gameObject);
+        OnCaliber?.Invoke();
+        _moveTween = _player.transform.DOMove(_playerCalibratedPosition, Duration).SetLink(gameObject);
 
         for (var i = 0; i < _movePoints.Count; i++)
         {
-            _moveTween = _movePoints[i].transform.DOMove(_pointsCalibratedPosition[i], _duration).SetLink(gameObject);
+            _moveTween = _movePoints[i].transform.DOMove(_pointsCalibratedPosition[i], Duration).SetLink(gameObject);
         }
 
         _moveTween.OnComplete(_player.EnableTapping);

@@ -3,13 +3,14 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour
 {
-    [SerializeField] private float _duration;
     [SerializeField] private int _direction;
     
+    private float _duration;
     private Tween _moveTween;
 
     private void Start()
     {
+        _duration = 50 * transform.localScale.x + Random.Range(-5, 6);
         RotateObject();
     }
 

@@ -7,6 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(Obstacle))]
 public class ObstacleMover : MonoBehaviour
 {
+    
     [SerializeField] private int _radius;
     [SerializeField] private float _speed;
     [SerializeField] private float _angle;
@@ -14,8 +15,14 @@ public class ObstacleMover : MonoBehaviour
     [SerializeField] private bool _direction;
 
     private ObstacleSpawner _point;
+    private Animator _animator;
     private float _lapTime = 0;
     private Vector3 _pointPosition;
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
 
     private void Start()
     {
@@ -30,6 +37,16 @@ public class ObstacleMover : MonoBehaviour
         _angle = 0;
         _lapTime = 0;
         _direction = direction;
+    }
+
+    public void Disable()
+    {
+        _animator.SetBool("IsEnable", false);
+    }
+    
+    public void Enable()
+    {
+        _animator.SetBool("IsEnable", true);
     }
     
     private void Update()

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4449234353438251827}
   - component: {fileID: 2883596505382328645}
   - component: {fileID: 4606507637108358427}
+  - component: {fileID: 7735088885236315017}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -130,6 +131,7 @@ MonoBehaviour:
   _speed: 0
   _angle: 0
   _startAngle: 0
+  _direction: 0
 --- !u!50 &4606507637108358427
 Rigidbody2D:
   serializedVersion: 4
@@ -151,3 +153,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 3
+--- !u!95 &7735088885236315017
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078487031265057715}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b812b42479b38254abafef38582bb67c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

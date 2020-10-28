@@ -9,14 +9,17 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePointsSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneCallibler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Effects/ChaoticMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneCalibrator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/SwampAttack/Scripts/UI/NextWave.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Effects/Rotate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Effects/Tape.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Effects/Pulse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePoint/MovePoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePoint/ObstacleSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePoint/Obstacle/Obstacle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePoint/Obstacle/ObstacleMover.cs" root0="FORCE_HIGHLIGHTING" />
@@ -24,17 +27,25 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Effects/Rotate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/DifficultSetter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/ObstacleSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/Obstacle/ObstacleMover.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SceneCallibler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Effects/SlowMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Effects/ChaoticMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/MovePoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Pause.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Effects/BackgroundScroll.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneCallibler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneCalliber.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneCalibrator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePointsSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Effects/Pulse.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Effects/Scroll.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Effects/Tape.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Effects/Rotate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/Obstacle/ObstacleMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/ObstacleSpawner.cs" />
       </list>
     </option>
   </component>
@@ -85,7 +96,8 @@
       <updated>1603434550370</updated>
       <workItem from="1603434551687" duration="1203000" />
       <workItem from="1603700569112" duration="11370000" />
-      <workItem from="1603786900422" duration="13035000" />
+      <workItem from="1603786900422" duration="13997000" />
+      <workItem from="1603863342853" duration="11691000" />
     </task>
     <servers />
   </component>
