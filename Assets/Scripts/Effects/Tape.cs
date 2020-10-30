@@ -31,9 +31,7 @@ public class Tape : MonoBehaviour
 
     private void CorrectPosition()
     {
-        
         Vector2 position = transform.localPosition;
-        Debug.Log(position.y <= EndY);
         if (position.y <= EndY)
         {
             transform.localPosition = new Vector2(position.x, SpawnY);

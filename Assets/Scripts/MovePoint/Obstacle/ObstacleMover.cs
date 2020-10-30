@@ -15,14 +15,9 @@ public class ObstacleMover : MonoBehaviour
     [SerializeField] private bool _direction;
 
     private ObstacleSpawner _point;
-    private Animator _animator;
+    private Tween _tween;
     private float _lapTime = 0;
     private Vector3 _pointPosition;
-
-    private void Awake()
-    {
-        _animator = GetComponent<Animator>();
-    }
 
     private void Start()
     {
@@ -39,20 +34,26 @@ public class ObstacleMover : MonoBehaviour
         _direction = direction;
     }
 
-    public void Disable()
-    {
-        _animator.SetBool("IsEnable", false);
-    }
-    
-    public void Enable()
-    {
-        _animator.SetBool("IsEnable", true);
-    }
-    
     private void Update()
     {
         MoveAround();
         transform.right = _pointPosition - transform.position;
+    }
+
+    public void EnableObstacle()
+    {
+        _tween = transform.DOScale(new Vector3(1f, 1f, 1f), 0.3f).SetLink(gameObject);
+    }
+
+    public void DisableObstacle()
+    {
+        _tween = transform.DOScale(new Vector3(0f, 0f, 1f), 0.3f).SetLink(gameObject);
+        _tween.OnComplete(Dis);
+    }
+
+    private void Dis()
+    {
+        gameObject.SetActive(false);
     }
 
     private void MoveAround()

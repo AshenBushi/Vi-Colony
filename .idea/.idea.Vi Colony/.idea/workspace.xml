@@ -9,43 +9,53 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePointsSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneCalibrator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/SwampAttack/Scripts/UI/NextWave.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Effects/Rotate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Effects/Tape.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Effects/Pulse.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/Бесконечный раннер/Scripts/Spawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StartGame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/Бесконечный раннер/Scripts/ObjectPool.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Lose.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePoint/MovePoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePoint/ObstacleSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePoint/Obstacle/Obstacle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ShowScore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePoint/Obstacle/ObstacleMover.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/DifficultSetter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Effects/SlowMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Effects/ChaoticMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/MovePoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Pause.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Effects/BackgroundScroll.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneCallibler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneCalliber.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneCalibrator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MovePointsSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Effects/Pulse.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Effects/Scroll.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Effects/Tape.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Effects/Rotate.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/Obstacle/ObstacleMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Effects/Tape.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/StartGame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ShowScore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StartGame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/Obstacle/Obstacle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MovePointsSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/ObstacleSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/Obstacle/ObstacleMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Lose.cs" />
       </list>
     </option>
   </component>
@@ -97,7 +107,10 @@
       <workItem from="1603434551687" duration="1203000" />
       <workItem from="1603700569112" duration="11370000" />
       <workItem from="1603786900422" duration="13997000" />
-      <workItem from="1603863342853" duration="11691000" />
+      <workItem from="1603863342853" duration="20907000" />
+      <workItem from="1603960849770" duration="9914000" />
+      <workItem from="1604000339318" duration="34000" />
+      <workItem from="1604036372657" duration="1755000" />
     </task>
     <servers />
   </component>
@@ -111,13 +124,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1603714806417" />
+    <state x="601" y="246" width="700" height="530" key="recent.locations.popup" timestamp="1603964614122">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="601" y="246" width="700" height="530" key="recent.locations.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603964614122" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1603799411092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603799411092" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603799338065">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603973860984">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603799338065" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603973860984" />
   </component>
 </project>

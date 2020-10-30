@@ -68,7 +68,7 @@ public class MovePointsSpawner : ObjectPool
         
         foreach (var item in MovePoints[pointIndex].GetComponentsInChildren<ObstacleSpawner>())
         {
-            item.DisableAllObstacles();
+            item.DisableAllObstacles(true);
         }
         
         NextIndex(ref pointIndex);

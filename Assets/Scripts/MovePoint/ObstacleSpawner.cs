@@ -27,13 +27,23 @@ public class ObstacleSpawner: ObjectPool
         {
             _obstacles.Add(item.GetComponent<ObstacleMover>());
         }
+        
+        DisableAllObstacles(false);
     }
 
-    public void DisableAllObstacles()
+    public void DisableAllObstacles(bool playAnim)
     {
-        foreach (var obstacle in _obstacles)
+        if (playAnim)
         {
-            obstacle.Disable();
+            foreach (var obstacle in _obstacles)
+            {
+                obstacle.DisableObstacle();
+            }
+        }
+        else
+        {
+            foreach (var obstacle in _obstacles)
+                obstacle.gameObject.SetActive(false);
         }
     }
 
@@ -68,7 +78,7 @@ public class ObstacleSpawner: ObjectPool
     
     public void SpawnObstacles(int pointNumber)
     {
-        DisableAllObstacles();
+        DisableAllObstacles(false);
         Generator(pointNumber);
 
         _startAngle = 0;
@@ -83,7 +93,8 @@ public class ObstacleSpawner: ObjectPool
         {
             var index = Random.Range(0, _obstacles.Count);
             if (_obstacles[index].gameObject.activeSelf != false) continue;
-            _obstacles[index].Enable();
+            _obstacles[index].gameObject.SetActive(true);
+            _obstacles[index].EnableObstacle();
             _toTurnOn--;
         }
     }

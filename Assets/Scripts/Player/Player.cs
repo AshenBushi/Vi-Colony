@@ -7,14 +7,16 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(PlayerMover))]
 public class Player : MonoBehaviour
 {
-    private PlayerMover _mover;
     private const int DefaultSpeed = 10;
+    private PlayerMover _mover;
     
     //public int Health { get; } = 100;
     public float Speed { get; private set;} = DefaultSpeed;
     public float PlayerJumps { get; private set; } = 0;
+
+    public event UnityAction OnJumping;
     
-    public event UnityAction Jumping;
+    public event UnityAction OnDie;
 
     private void OnEnable()
     {
@@ -29,13 +31,13 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        SceneManager.LoadScene(0);
+        OnDie?.Invoke();
     }
 
     private void OnMakeJump()
     {
         PlayerJumps++;
         Speed = DefaultSpeed + PlayerJumps / 100;
-        Jumping?.Invoke();
+        OnJumping?.Invoke();
     }
 }
