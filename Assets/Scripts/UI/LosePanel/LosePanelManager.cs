@@ -1,41 +1,36 @@
 ﻿using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public class Lose : MonoBehaviour
+public class LosePanelManager : MonoBehaviour
 {
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerMover _playerMover;
     [SerializeField] private GameObject _score;
     [SerializeField] private GameObject _spawner;
+    [SerializeField] private StatsManager _statsManager;
 
     private CanvasGroup _canvasGroup;
-    private PlayerMover _mover;
 
     private void OnEnable()
     {
         _canvasGroup = GetComponent<CanvasGroup>();
-        _mover = _player.GetComponent<PlayerMover>();
-        _player.OnDie += OnDie;
+        _playerMover.OnDied += OnDied;
     }
 
     private void OnDisable()
     {
-        _player.OnDie -= OnDie;
+        _playerMover.OnDied -= OnDied;
     }
 
-    private void OnDie()
+    private void OnDied(int score, int dieCount)
     {
-        _mover.Losing();
-        _player.gameObject.SetActive(false);
+        _playerMover.Died();
         _score.SetActive(false);
         _spawner.SetActive(false);
         _canvasGroup.alpha = 1;
         _canvasGroup.interactable = true;
-    }
-
-    private void StartLoseScreen()
-    {
-        
+        _statsManager.AppearStats(score, dieCount);
     }
 
     public void Restart()
@@ -45,11 +40,11 @@ public class Lose : MonoBehaviour
 
     public void Continue()
     {
-        _mover.Continue();
-        _player.gameObject.SetActive(true);
-        _score.SetActive(true);
-        _spawner.SetActive(true);
         _canvasGroup.alpha = 0;
         _canvasGroup.interactable = false;
+        _score.SetActive(true);
+        _spawner.SetActive(true);
+        _playerMover.Revive();
+        _statsManager.DisappearStats();
     }
 }

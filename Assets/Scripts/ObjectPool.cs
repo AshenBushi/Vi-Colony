@@ -10,11 +10,12 @@ public class ObjectPool : MonoBehaviour
 
     protected readonly List<GameObject> Pool = new List<GameObject>();
 
-    protected void Initialize(GameObject template)
+    protected void Initialize(GameObject prefab)
     {
         for (var i = 0; i < _capacity; i++)
         {
-            var spawned = Instantiate(template, _container.transform);
+            var spawned = Instantiate(prefab, _container.transform);
+            spawned.SetActive(false);
             Pool.Add(spawned);
         }
     }

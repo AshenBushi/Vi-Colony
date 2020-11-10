@@ -1,33 +1,30 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class ShowScore : MonoBehaviour
 {
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerMover _playerMover;
 
     private TMP_Text _text;
 
     private void OnEnable()
     {
-        _player.OnJumping += OnJumping;
+        _playerMover.OnJump += OnJump;
     }
 
     private void OnDisable()
     {
-        _player.OnJumping -= OnJumping;
+        _playerMover.OnJump -= OnJump;
     }
 
     private void Start()
     {
         _text = GetComponent<TMP_Text>();
-        OnJumping();
+        OnJump(0);
     }
 
-    private void OnJumping()
+    private void OnJump(int jumps)
     {
-        _text.text = _player.PlayerJumps.ToString();
+        _text.text = jumps.ToString();
     }
 }

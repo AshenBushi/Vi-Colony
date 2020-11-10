@@ -1,29 +1,34 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(MovePointStateManager))]
 public class MovePoint : MonoBehaviour
 {
-    [SerializeField] private Animator _animator;
-    [SerializeField] private Animator _coreAnimator;
-    [SerializeField] private Animator _backAnimator;
+    private MovePointStateManager _stateManager;
+    private ObstacleSpawner _obstacleSpawner;
+    
+    public int Number { get; private set; }
+
+    private void Awake()
+    {
+        _obstacleSpawner = GetComponentInChildren<ObstacleSpawner>();
+        _stateManager = GetComponent<MovePointStateManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.TryGetComponent(out Player player)) return;
-        _coreAnimator.SetBool("Reached", true);
-        _backAnimator.SetBool("Reached", true);
+        _obstacleSpawner.DisableAllObstacles(0);
+        _stateManager.Infect();
     }
-
-    public void SpawnPoint()
+    
+    public void Spawn(float x, float y, int number)
     {
-        _coreAnimator.SetBool("Reached", false);
-        _backAnimator.SetBool("Reached", false);
-    }
-
-    public void ChangPointState(bool state)
-    {
-        _animator.SetBool("State", state);
+        gameObject.SetActive(true);
+        _stateManager.Cure();
+        transform.position = new Vector2(x,y);
+        Number = number;
+        _obstacleSpawner.SpawnObstacles(Number);
     }
 }

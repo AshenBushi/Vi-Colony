@@ -191,6 +191,7 @@
           </e>
           <e p="MovePoint" t="Include">
             <e p="MovePoint.cs" t="Include" />
+            <e p="MovePointStateManager.cs" t="Include" />
             <e p="Obstacle" t="Include">
               <e p="Obstacle.cs" t="Include" />
               <e p="ObstacleMover.cs" t="Include" />
@@ -204,11 +205,14 @@
             <e p="PlayerMover.cs" t="Include" />
           </e>
           <e p="SceneCalibrator.cs" t="Include" />
-          <e p="StartGame.cs" t="Include" />
           <e p="UI" t="Include">
-            <e p="Buttons.cs" t="Include" />
-            <e p="Lose.cs" t="Include" />
+            <e p="LosePanel" t="Include">
+              <e p="LoseButtonAppear.cs" t="Include" />
+              <e p="LosePanelManager.cs" t="Include" />
+              <e p="StatsManager.cs" t="Include" />
+            </e>
             <e p="ShowScore.cs" t="Include" />
+            <e p="StartScreen.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

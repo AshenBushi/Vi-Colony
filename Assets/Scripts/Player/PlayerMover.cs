@@ -7,61 +7,92 @@ using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
-public class PlayerMover : MonoBehaviour
+public class PlayerMover : Player
 {
     [SerializeField] private MovePointsSpawner _movePointsSpawner;
     [SerializeField] private SceneCalibrator _sceneCalibrator;
 
+    private Vector3 _lastPlayerPosition;
     private PlayerInput _input;
-    private Player _player;
-    private Tween _moveTween;
+    private Tween _tween;
     private AudioSource _audio;
-    private bool _isLose = false;
+    private float _playedTime;
 
-    public event UnityAction MakeJump;
+    public event UnityAction<int> OnJump;
 
     private void Awake()
     {
+        PlayerCollider = GetComponent<CircleCollider2D>();
+        _audio = GetComponent<AudioSource>();
         _input = new PlayerInput();
         _input.Player.Tap.performed += ctx => OnTap();
     }
 
-
     private void OnEnable()
     {
-        _player = GetComponent<Player>();
-        _audio = GetComponent<AudioSource>();
+        OnTakeDamage += ReturnToLastPoint;
+    }
+
+    private void OnDisable()
+    {
+        OnTakeDamage -= ReturnToLastPoint;
     }
 
     private void OnTap()
     {
-        if (_isLose) return;
         _audio.Play();
         _input.Disable();
-        var spawnerPosition = _movePointsSpawner.GetNextMovingPoint().transform.position;
-        _moveTween = transform
-            .DOMove(spawnerPosition, (spawnerPosition.y - _player.transform.position.y) / (_player.Speed * 2))
-            .SetEase(Ease.Linear).SetLink(gameObject);
-        _moveTween.OnComplete(NextJump);
+        _lastPlayerPosition = transform.position;
+        var nextPointPosition = _movePointsSpawner.GiveMovePoint(JumpsCount + 1).transform.position;
+        _tween = transform
+            .DOMove(nextPointPosition, (nextPointPosition.y - transform.position.y) / (_speed * 2 / 10))
+            .SetEase(Ease.Linear).SetLink(gameObject); 
+        _tween.OnComplete(CompleteJump);
     }
-    private void NextJump()
+    private void CompleteJump()
     {
-        MakeJump?.Invoke();
+        JumpsCount++;
+        OnJump?.Invoke(JumpsCount);
+        IncreaseSpeed();
         _sceneCalibrator.CalibrateScene();
     }
 
-    public void EnableTapping()
+    private void ReturnToLastPoint()
+    {
+        _tween.Kill();
+        _tween = transform
+            .DOMove(_lastPlayerPosition, (transform.position.y - _lastPlayerPosition.y) / (_speed * 2 / 10))
+            .SetEase(Ease.Linear).SetLink(gameObject);
+        _tween.OnComplete(() =>
+        {
+            EnableTap();
+            PlayerCollider.enabled = true;
+        });
+    }
+    
+    public void EnableTap()
     {
         _input.Enable();
     }
-    
-    public void Losing()
+
+    public void Died()
     {
-        _isLose = true;
+        _input.Disable();
+        _tween.Kill();
+        ChangePlayerState(false);
     }
 
-    public void Continue()
+    public void Revive()
     {
-        _isLose = false;
+        _health = 100;
+        EnableTap();
+        ChangePlayerState(true);
+        transform.position = _lastPlayerPosition;
+    }
+    
+    private void ChangePlayerState(bool state)
+    {
+        gameObject.SetActive(state);
+        IsAlive = state;
     }
 }

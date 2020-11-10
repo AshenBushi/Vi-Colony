@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    private Animator _animator;
+    private int _damage = 15;
 
-    private void Awake()
-    {
-        _animator = GetComponent<Animator>();
-    }
+    protected int Radius;
+    protected float Speed;
+    protected float StartAngle;
+    protected bool Direction;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.TryGetComponent(out Player player)) return;
-        player.Die();
+        player.TakeDamage(_damage);
     }
 }

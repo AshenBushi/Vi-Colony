@@ -1,43 +1,44 @@
-﻿using System;
-using DG.Tweening;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(PlayerMover))]
 public class Player : MonoBehaviour
 {
-    private const int DefaultSpeed = 10;
-    private PlayerMover _mover;
-    
-    //public int Health { get; } = 100;
-    public float Speed { get; private set;} = DefaultSpeed;
-    public float PlayerJumps { get; private set; } = 0;
+    private const float StartSpeed = 100;
 
-    public event UnityAction OnJumping;
-    
-    public event UnityAction OnDie;
+    protected float _speed = StartSpeed;
 
-    private void OnEnable()
+    [SerializeField] protected int _health = 1000;
+
+    [SerializeField] protected int _dieCount = 0;
+
+    protected CircleCollider2D PlayerCollider;
+    protected bool IsAlive = true;
+    public int JumpsCount { get; protected set; } = 0;
+
+    public event UnityAction<int, int> OnDied;
+    public event UnityAction OnTakeDamage;
+
+    protected void IncreaseSpeed()
     {
-        _mover = GetComponent<PlayerMover>();
-        _mover.MakeJump += OnMakeJump;
+        if(_speed < 150)
+            _speed = StartSpeed + JumpsCount / 2.5f;
     }
 
-    private void OnDisable()
+    public void TakeDamage(int damage)
     {
-        _mover.MakeJump -= OnMakeJump;
+        PlayerCollider.enabled = false;
+        _health -= damage;
+        if(_health <= 0)
+            IsDied();
+        else
+            OnTakeDamage?.Invoke();
     }
 
-    public void Die()
+    private void IsDied()
     {
-        OnDie?.Invoke();
-    }
-
-    private void OnMakeJump()
-    {
-        PlayerJumps++;
-        Speed = DefaultSpeed + PlayerJumps / 100;
-        OnJumping?.Invoke();
+        if (_health > 0) return;
+        _dieCount += 1;
+        OnDied?.Invoke(JumpsCount, _dieCount);
     }
 }

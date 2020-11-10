@@ -1,23 +1,13 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using DG.Tweening;
+﻿using DG.Tweening;
 using UnityEngine;
 
-[RequireComponent(typeof(Obstacle))]
-public class ObstacleMover : MonoBehaviour
+public class ObstacleMover : Obstacle
 {
-    
-    [SerializeField] private int _radius;
-    [SerializeField] private float _speed;
-    [SerializeField] private float _angle;
-    [SerializeField] private float _startAngle;
-    [SerializeField] private bool _direction;
-
     private ObstacleSpawner _point;
     private Tween _tween;
-    private float _lapTime = 0;
     private Vector3 _pointPosition;
+    private float _positionValue = 0;
+    private float _angle;
 
     private void Start()
     {
@@ -26,60 +16,56 @@ public class ObstacleMover : MonoBehaviour
 
     public void SetParameters(int radius, float speed, float startAngle, bool direction)
     {
-        _radius = radius;
-        _speed = speed;
-        _startAngle = startAngle;
+        Radius = radius;
+        Speed = speed;
+        StartAngle = startAngle;
+        Direction = direction;
         _angle = 0;
-        _lapTime = 0;
-        _direction = direction;
+        _positionValue = 0;
     }
 
     private void Update()
     {
         MoveAround();
-        transform.right = _pointPosition - transform.position;
     }
 
     public void EnableObstacle()
     {
-        _tween = transform.DOScale(new Vector3(1f, 1f, 1f), 0.3f).SetLink(gameObject);
+        gameObject.SetActive(true);
+        transform.localScale = new Vector2(1f, 1f);
     }
 
     public void DisableObstacle()
     {
-        _tween = transform.DOScale(new Vector3(0f, 0f, 1f), 0.3f).SetLink(gameObject);
-        _tween.OnComplete(Dis);
-    }
-
-    private void Dis()
-    {
-        gameObject.SetActive(false);
+        _tween = transform.DOScale(new Vector2(0f, 0f), 0.4f).SetLink(gameObject);
+        _tween.OnComplete(() => gameObject.SetActive(false));
     }
 
     private void MoveAround()
     {
         _pointPosition = _point.transform.position;
+        transform.right = _pointPosition - transform.position;
         
-        if (_direction)
+        if (Direction)
         {
-            if (_lapTime > 1)
-                _lapTime = 0;
+            if (_positionValue > 1)
+                _positionValue = 0;
             else
-                _lapTime += Time.deltaTime * _speed / 6.28f;
+                _positionValue += Time.deltaTime * Speed / 6.28f;
         }
         else
         {
-            if (_lapTime < 0)
-                _lapTime = 1;
+            if (_positionValue < 0)
+                _positionValue = 1;
             else
-                _lapTime -= Time.deltaTime * _speed / 6.28f;
+                _positionValue -= Time.deltaTime * Speed / 6.28f;
         }
 
-        _angle = Mathf.Lerp(0 + _startAngle, 6.28f + _startAngle, _lapTime);
+        _angle = Mathf.Lerp(0 + StartAngle, 6.28f + StartAngle, _positionValue);
         
         var x = Mathf.Cos(_angle);
         var y = Mathf.Sin(_angle);
         
-        transform.position = new Vector3(x * _radius, y * _radius, 0) + _pointPosition;
+        transform.position = new Vector3(x * Radius, y * Radius, 0) + _pointPosition;
     }
 }
