@@ -1,0 +1,1193 @@
+fileFormatVersion: 2
+guid: d3cbf1d06d7370549ba42617e7d02cff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8959844280714397535
+    second: ViC SpriteList_0
+  - first:
+      213: -1960873442044690305
+    second: ViC SpriteList_1
+  - first:
+      213: 4442466053683547554
+    second: ViC SpriteList_2
+  - first:
+      213: -9043334442882420001
+    second: ViC SpriteList_3
+  - first:
+      213: 2207301827986148502
+    second: ViC SpriteList_4
+  - first:
+      213: -6659057941540587903
+    second: ViC SpriteList_5
+  - first:
+      213: 8715633014980275563
+    second: ViC SpriteList_6
+  - first:
+      213: -5921791477426902703
+    second: ViC SpriteList_7
+  - first:
+      213: -8983932584904313646
+    second: ViC SpriteList_8
+  - first:
+      213: -7343505346884295060
+    second: ViC SpriteList_9
+  - first:
+      213: 5825835686952702184
+    second: ViC SpriteList_10
+  - first:
+      213: 8313637301668637175
+    second: ViC SpriteList_11
+  - first:
+      213: -4338188384460589884
+    second: ViC SpriteList_12
+  - first:
+      213: 5187069793492260385
+    second: ViC SpriteList_13
+  - first:
+      213: 4934501460826324573
+    second: ViC SpriteList_14
+  - first:
+      213: 5923348893396130612
+    second: ViC SpriteList_15
+  - first:
+      213: 3370677196392634653
+    second: ViC SpriteList_16
+  - first:
+      213: -4102448906400192018
+    second: ViC SpriteList_17
+  - first:
+      213: -6324713597431116359
+    second: ViC SpriteList_18
+  - first:
+      213: -4468072047885110968
+    second: ViC SpriteList_19
+  - first:
+      213: -29706612892815045
+    second: ViC SpriteList_20
+  - first:
+      213: -7438087802190019760
+    second: ViC SpriteList_21
+  - first:
+      213: 4181040546564210011
+    second: ViC SpriteList_22
+  - first:
+      213: 1994178517951126665
+    second: ViC SpriteList_23
+  - first:
+      213: -6895401283547387768
+    second: ViC SpriteList_24
+  - first:
+      213: 8779823008717054024
+    second: ViC SpriteList_25
+  - first:
+      213: 1012784189777628115
+    second: ViC SpriteList_26
+  - first:
+      213: -3471989427831550867
+    second: ViC SpriteList_27
+  - first:
+      213: 7897638490380966081
+    second: ViC SpriteList_28
+  - first:
+      213: -8447277761541783597
+    second: ViC SpriteList_29
+  - first:
+      213: -2778322401879222526
+    second: ViC SpriteList_30
+  - first:
+      213: 4891000665446185094
+    second: ViC SpriteList_31
+  - first:
+      213: 5444734815568439959
+    second: ViC SpriteList_32
+  - first:
+      213: 6031691629234689675
+    second: ViC SpriteList_33
+  - first:
+      213: 2711045761350541796
+    second: ViC SpriteList_34
+  - first:
+      213: 1586770701721280260
+    second: ViC SpriteList_35
+  - first:
+      213: -391128650651162924
+    second: ViC SpriteList_36
+  - first:
+      213: -4423595033732783870
+    second: ViC SpriteList_37
+  - first:
+      213: -7467641523365496907
+    second: ViC SpriteList_38
+  - first:
+      213: -7379105921159344837
+    second: ViC SpriteList_39
+  - first:
+      213: -6228425180750244722
+    second: ViC SpriteList_40
+  - first:
+      213: -4725490418650167338
+    second: ViC SpriteList_0
+  - first:
+      213: -8015049972872158514
+    second: ViC SpriteList_1
+  - first:
+      213: -4262142012089709008
+    second: ViC SpriteList_2
+  - first:
+      213: -739544011287301202
+    second: ViC SpriteList_3
+  - first:
+      213: 8994675189017863590
+    second: ViC SpriteList_4
+  - first:
+      213: -829690688724634685
+    second: ViC SpriteList_5
+  - first:
+      213: 602147364385394244
+    second: ViC SpriteList_6
+  - first:
+      213: -8938948761912954235
+    second: ViC SpriteList_7
+  - first:
+      213: 2309548873016418082
+    second: ViC SpriteList_8
+  - first:
+      213: 241440464957669975
+    second: ViC SpriteList_9
+  - first:
+      213: -2302206900936663246
+    second: ViC SpriteList_10
+  - first:
+      213: -4060579162086946451
+    second: ViC SpriteList_11
+  - first:
+      213: 6625109786658646373
+    second: ViC SpriteList_12
+  - first:
+      213: -6406050145244301208
+    second: ViC SpriteList_13
+  - first:
+      213: 3856061430589920820
+    second: ViC SpriteList_14
+  - first:
+      213: 145167865320990679
+    second: ViC SpriteList_15
+  - first:
+      213: -5991166583107329405
+    second: ViC SpriteList_16
+  - first:
+      213: -3775451543104481830
+    second: ViC SpriteList_17
+  - first:
+      213: 1471213426654333226
+    second: ViC SpriteList_18
+  - first:
+      213: -6735368638539106382
+    second: ViC SpriteList_19
+  - first:
+      213: 4492764564245330644
+    second: ViC SpriteList_20
+  - first:
+      213: -3615532918616336457
+    second: ViC SpriteList_21
+  - first:
+      213: 5666552718528545790
+    second: ViC SpriteList_22
+  - first:
+      213: 7300555430459583204
+    second: ViC SpriteList_23
+  - first:
+      213: 7556898639977433951
+    second: ViC SpriteList_24
+  - first:
+      213: 2532598207180399448
+    second: ViC SpriteList_25
+  - first:
+      213: -3347277492700616067
+    second: ViC SpriteList_26
+  - first:
+      213: 7497796318632154762
+    second: ViC SpriteList_27
+  - first:
+      213: 8654475846061845352
+    second: ViC SpriteList_28
+  - first:
+      213: -6975213321545091370
+    second: ViC SpriteList_29
+  - first:
+      213: -2765691202478765773
+    second: ViC SpriteList_30
+  - first:
+      213: -785633534409680355
+    second: ViC SpriteList_31
+  - first:
+      213: 4004823265814739404
+    second: ViC SpriteList_32
+  - first:
+      213: 2556943570303616318
+    second: ViC SpriteList_33
+  - first:
+      213: 3039341123963257185
+    second: ViC SpriteList_34
+  - first:
+      213: -221869246399376225
+    second: ViC SpriteList_35
+  - first:
+      213: -276083740899314520
+    second: ViC SpriteList_36
+  - first:
+      213: 7843688182564013387
+    second: ViC SpriteList_37
+  - first:
+      213: 1006317627256666236
+    second: ViC SpriteList_38
+  - first:
+      213: -8000668470986213499
+    second: ViC SpriteList_39
+  - first:
+      213: -1230496014071753941
+    second: ViC SpriteList_40
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ViC SpriteList_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 708
+        width: 304
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d748de308fab6eb0800000000000000
+      internalID: -4725490418650167338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 778
+        width: 237
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec263f5e382d4c090800000000000000
+      internalID: -8015049972872158514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_2
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 772
+        width: 243
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ecf1bfb64d9d4c0800000000000000
+      internalID: -4262142012089709008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_3
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 823
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3f377d3ac9cb5f0800000000000000
+      internalID: -739544011287301202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 837
+        width: 173
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a5ed67bd6183dc70800000000000000
+      internalID: 8994675189017863590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_5
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 732
+        width: 266
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c37e19e6b85c74f0800000000000000
+      internalID: -829690688724634685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 472
+        width: 210
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e01ac66d14b5800800000000000000
+      internalID: 602147364385394244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_7
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 642
+        width: 57
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582b2cc267972f380800000000000000
+      internalID: -8938948761912954235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_8
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 604
+        width: 132
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f1c87a67a2d0020800000000000000
+      internalID: 2309548873016418082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_9
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 601
+        width: 134
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752053cd2d4c95300800000000000000
+      internalID: 241440464957669975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_10
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 601
+        width: 132
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f973e650bec00e0800000000000000
+      internalID: -2302206900936663246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_11
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 603
+        width: 134
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d69447514cce5a7c0800000000000000
+      internalID: -4060579162086946451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_12
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 635
+        width: 241
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569a0c7ef3e11fb50800000000000000
+      internalID: 6625109786658646373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_13
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 475
+        width: 558
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868bf5765532917a0800000000000000
+      internalID: -6406050145244301208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_14
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 537
+        width: 161
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436956ad07b738530800000000000000
+      internalID: 3856061430589920820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 291
+        width: 259
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d76245876db30200800000000000000
+      internalID: 145167865320990679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_16
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 304
+        width: 153
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38262b73cb91bdca0800000000000000
+      internalID: -5991166583107329405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_17
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 306
+        width: 116
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad59e8223d6ea9bc0800000000000000
+      internalID: -3775451543104481830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_18
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 303
+        width: 119
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29448411dcca6410800000000000000
+      internalID: 1471213426654333226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_19
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 305
+        width: 103
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7f194a8e92782a0800000000000000
+      internalID: -6735368638539106382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_20
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 440
+        width: 161
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da3e474191895e30800000000000000
+      internalID: 4492764564245330644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_21
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 347
+        width: 145
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7542867fb03ddc0800000000000000
+      internalID: -3615532918616336457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 259
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef30be0cca3a3ae40800000000000000
+      internalID: 5666552718528545790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_23
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 225
+        width: 389
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eaa797eb78c05560800000000000000
+      internalID: 7300555430459583204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_24
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 233
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 1, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5bcc7f564f7fd860800000000000000
+      internalID: 7556898639977433951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_25
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 233
+        width: 52
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85367c1b6a8952320800000000000000
+      internalID: 2532598207180399448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_26
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 260
+        width: 145
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a6be2ead41c81d0800000000000000
+      internalID: -3347277492700616067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_28
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 129
+        width: 142
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86be6b9bdefda1870800000000000000
+      internalID: 8654475846061845352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_29
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 170
+        width: 87
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d67bb8b070133f90800000000000000
+      internalID: -6975213321545091370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_31
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 146
+        width: 522
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a50e1867ed815f0800000000000000
+      internalID: -785633534409680355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_32
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 89
+        width: 83
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc97b13ba8df39730800000000000000
+      internalID: 4004823265814739404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 181
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e358aa241a61c7320800000000000000
+      internalID: 2556943570303616318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_34
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 16
+        width: 92
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161011d26a8ed2a20800000000000000
+      internalID: 3039341123963257185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_35
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 81
+        width: 282
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9418cd8813cbecf0800000000000000
+      internalID: -221869246399376225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_36
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 32
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a47f67ec472b2cf0800000000000000
+      internalID: -276083740899314520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_37
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 0
+        width: 142
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4548aa28d06adc60800000000000000
+      internalID: 7843688182564013387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_38
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 2
+        width: 87
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c78f8dfdc8827fd00800000000000000
+      internalID: 1006317627256666236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_39
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 30
+        width: 175
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587f23d3a6ae7f090800000000000000
+      internalID: -8000668470986213499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViC SpriteList_40
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 23
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2318b705666ceee0800000000000000
+      internalID: -1230496014071753941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
