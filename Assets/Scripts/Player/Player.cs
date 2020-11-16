@@ -1,44 +1,44 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(PlayerMover))]
 public class Player : MonoBehaviour
 {
-    private const float StartSpeed = 100;
+    private const int _maxHealth = 100;
+    
+    private PlayerMover _mover;
+    private int _health = _maxHealth;
+    
+    public int DieCount { get; private set; } = 0;
 
-    protected float _speed = StartSpeed;
+    public event UnityAction OnApplyDamage;
+    public event UnityAction OnDied;
 
-    [SerializeField] protected int _health = 1000;
-
-    [SerializeField] protected int _dieCount = 0;
-
-    protected CircleCollider2D PlayerCollider;
-    protected bool IsAlive = true;
-    public int JumpsCount { get; protected set; } = 0;
-
-    public event UnityAction<int, int> OnDied;
-    public event UnityAction OnTakeDamage;
-
-    protected void IncreaseSpeed()
+    private void Awake()
     {
-        if(_speed < 150)
-            _speed = StartSpeed + JumpsCount / 2.5f;
+        _mover = GetComponent<PlayerMover>();
     }
 
-    public void TakeDamage(int damage)
+    public void ApplyDamage(int damage)
     {
-        PlayerCollider.enabled = false;
         _health -= damage;
+        OnApplyDamage?.Invoke();
         if(_health <= 0)
-            IsDied();
-        else
-            OnTakeDamage?.Invoke();
+            Die();
     }
 
-    private void IsDied()
+    private void Die()
     {
-        if (_health > 0) return;
-        _dieCount += 1;
-        OnDied?.Invoke(JumpsCount, _dieCount);
+        _mover.DisableTap();
+        DieCount += 1;
+        OnDied?.Invoke();
+    }
+    
+    public void Revive()
+    {
+        _health = _maxHealth;
+        _mover.EnableTap();
     }
 }

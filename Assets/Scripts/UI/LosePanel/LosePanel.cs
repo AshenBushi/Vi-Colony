@@ -1,13 +1,13 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
-public class LosePanelManager : MonoBehaviour
+public class LosePanel : MonoBehaviour
 {
-    [SerializeField] private PlayerMover _playerMover;
-    [SerializeField] private GameObject _score;
-    [SerializeField] private GameObject _spawner;
+    [SerializeField] private Player _player;
+    [SerializeField] private SortingGroup _background;
     [SerializeField] private StatsManager _statsManager;
 
     private CanvasGroup _canvasGroup;
@@ -15,22 +15,19 @@ public class LosePanelManager : MonoBehaviour
     private void OnEnable()
     {
         _canvasGroup = GetComponent<CanvasGroup>();
-        _playerMover.OnDied += OnDied;
+        _player.OnDied += OpenLosePanel;
     }
 
     private void OnDisable()
     {
-        _playerMover.OnDied -= OnDied;
+        _player.OnDied -= OpenLosePanel;
     }
 
-    private void OnDied(int score, int dieCount)
+    private void OpenLosePanel()
     {
-        _playerMover.Died();
-        _score.SetActive(false);
-        _spawner.SetActive(false);
+        _background.sortingOrder = 1;
         _canvasGroup.alpha = 1;
         _canvasGroup.interactable = true;
-        _statsManager.AppearStats(score, dieCount);
     }
 
     public void Restart()
@@ -42,9 +39,6 @@ public class LosePanelManager : MonoBehaviour
     {
         _canvasGroup.alpha = 0;
         _canvasGroup.interactable = false;
-        _score.SetActive(true);
-        _spawner.SetActive(true);
-        _playerMover.Revive();
-        _statsManager.DisappearStats();
+        _player.Revive();
     }
 }

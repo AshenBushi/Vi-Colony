@@ -15,6 +15,6 @@ public class Obstacle : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.TryGetComponent(out Player player)) return;
-        player.TakeDamage(_damage);
+        player.ApplyDamage(_damage);
     }
 }

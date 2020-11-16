@@ -10,16 +10,13 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/LosePanel/StatsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePointsSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/Бесконечный раннер/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovePoint/MovePointStateManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneCalibrator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/SwampAttack/Scripts/UI/NextWave.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/LosePanel/LoseButtonAppear.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Effects/Rotate.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/LosePanel/LosePanelManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Effects/Tape.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/LosePanel/LosePanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../C#/Тест/Тест/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Effects/Pulse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/Бесконечный раннер/Scripts/Spawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../IJuniorCourse2D/Assets/Бесконечный раннер/Scripts/ObjectPool.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LightTheRunes/Assets/Scripts/Ads/DoubleCoinAds.cs" root0="SKIP_HIGHLIGHTING" />
@@ -66,15 +63,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/StartScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/LosePanel/LoseButtonAppear.cs" />
         <option value="$PROJECT_DIR$/../../C#/Тест/Тест/Program.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/LosePanel/LosePanelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/LosePanel/StatsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/InfectPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/MovePointState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/MovePoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/MovePointStateManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovePoint/Obstacle/Obstacle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/LosePanel/LosePanelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/LosePanel/LosePanel.cs" />
       </list>
     </option>
   </component>
@@ -88,7 +86,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.build.unityPlugin" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -138,6 +136,8 @@
       <workItem from="1604570521126" duration="2470000" />
       <workItem from="1604657253901" duration="4806000" />
       <workItem from="1604989994098" duration="5899000" />
+      <workItem from="1605267925380" duration="4023000" />
+      <workItem from="1605527678213" duration="252000" />
     </task>
     <servers />
   </component>
@@ -219,10 +219,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040@0.0.1920.1040" timestamp="1604565983815" />
-    <state x="461" y="163" key="SettingsEditor" timestamp="1604042390201">
+    <state x="461" y="163" key="SettingsEditor" timestamp="1605269262134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604042390201" />
+    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605269262134" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1603714806417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
